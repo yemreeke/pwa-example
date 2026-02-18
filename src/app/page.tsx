@@ -28,8 +28,8 @@ export default function Home() {
     <div className="p-4 pb-24 space-y-6">
       <header className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-white">Dashboard</h1>
-          <p className="text-sm text-slate-400">Facility Overview</p>
+          <h1 className="text-2xl font-bold tracking-tight text-white">Panel</h1>
+          <p className="text-sm text-slate-400">Tesis Özeti</p>
         </div>
         <div className="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center border border-indigo-500/30">
           <span className="font-bold text-indigo-400">BF</span>
@@ -55,22 +55,22 @@ export default function Home() {
             />
             <div className="absolute inset-3 bg-slate-900 rounded-full flex flex-col items-center justify-center">
               <span className="text-3xl font-bold text-white">{activeRate.toFixed(0)}%</span>
-              <span className="text-xs text-slate-400 uppercase tracking-widest">Active</span>
+              <span className="text-xs text-slate-400 uppercase tracking-widest">Aktif</span>
             </div>
           </div>
 
           <div className="grid grid-cols-3 gap-4 mt-6 w-full text-center">
             <div>
               <div className="text-emerald-400 font-bold text-lg">{stats.active}</div>
-              <div className="text-[10px] text-slate-500 uppercase">Running</div>
+              <div className="text-[10px] text-slate-500 uppercase">Çalışıyor</div>
             </div>
             <div>
               <div className="text-rose-400 font-bold text-lg">{stats.faulty}</div>
-              <div className="text-[10px] text-slate-500 uppercase">Faulty</div>
+              <div className="text-[10px] text-slate-500 uppercase">Arızalı</div>
             </div>
             <div>
               <div className="text-amber-400 font-bold text-lg">{stats.maintenance}</div>
-              <div className="text-[10px] text-slate-500 uppercase">Maint.</div>
+              <div className="text-[10px] text-slate-500 uppercase">Bakımda</div>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function Home() {
       {/* Metrics Grid */}
       <div className="grid grid-cols-2 gap-3">
         <SummaryCard
-          title="Total Hashrate"
+          title="Toplam Hashrate"
           value={`${(stats.hashrate / 1000).toFixed(2)} PH/s`}
           icon={Activity}
           trend="+2.4%"
@@ -87,13 +87,13 @@ export default function Home() {
           color="emerald"
         />
         <SummaryCard
-          title="Total Machines"
+          title="Toplam Cihaz"
           value={stats.total}
           icon={Server}
           color="slate"
         />
         <SummaryCard
-          title="Daily Revenue"
+          title="Günlük Gelir"
           value={`$${stats.revenue.toFixed(0)}`}
           icon={Zap}
           trend="-1.2%"
@@ -101,8 +101,8 @@ export default function Home() {
           color="amber"
         />
         <SummaryCard
-          title="Critical Alerts"
-          value={stats.faulty > 0 ? `${stats.faulty} unit(s)` : 'None'}
+          title="Kritik Uyarılar"
+          value={stats.faulty > 0 ? `${stats.faulty} cihaz` : 'Yok'}
           icon={AlertTriangle}
           color={stats.faulty > 0 ? "rose" : "slate"}
         />

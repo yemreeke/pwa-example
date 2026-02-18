@@ -5,17 +5,17 @@ import { Settings, User, Bell, Shield, LogOut, ChevronRight } from 'lucide-react
 export default function SettingsPage() {
     const settingsGroups = [
         {
-            title: 'Account',
+            title: 'Hesap',
             options: [
-                { icon: User, label: 'Profile', value: 'Operator' },
-                { icon: Bell, label: 'Notifications', value: 'On' },
-                { icon: Shield, label: 'Security', value: '' },
+                { icon: User, label: 'Profil', value: 'Operatör' },
+                { icon: Bell, label: 'Bildirimler', value: 'Açık' },
+                { icon: Shield, label: 'Güvenlik', value: '' },
             ]
         },
         {
-            title: 'System',
+            title: 'Sistem',
             options: [
-                { icon: Settings, label: 'Preferences', value: '' },
+                { icon: Settings, label: 'Tercihler', value: '' },
             ]
         }
     ];
@@ -26,7 +26,7 @@ export default function SettingsPage() {
                 <div className="p-2 bg-slate-800 rounded-lg text-slate-200">
                     <Settings size={24} />
                 </div>
-                <h1 className="text-xl font-bold text-white">Settings</h1>
+                <h1 className="text-xl font-bold text-white">Ayarlar</h1>
             </header>
 
             <div className="space-y-6">
@@ -55,11 +55,11 @@ export default function SettingsPage() {
 
                 <button className="w-full p-4 rounded-xl bg-rose-950/30 border border-rose-900/30 text-rose-400 flex items-center justify-center gap-2 font-medium hover:bg-rose-900/20 transition-colors mt-8">
                     <LogOut size={18} />
-                    Sign Out
+                    Çıkış Yap
                 </button>
 
                 <div className="text-center text-xs text-slate-600 mt-8">
-                    Bitcoin Facility Manager v1.0.0
+                    Bitcoin Tesis Yöneticisi v1.0.0
                 </div>
             </div>
         </div>

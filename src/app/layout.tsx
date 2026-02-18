@@ -6,8 +6,8 @@ import BottomNav from "@/components/BottomNav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bitcoin Facility Manager",
-  description: "Monitor and manage mining operations",
+  title: "Bitcoin Tesis Yöneticisi",
+  description: "Madencilik operasyonlarını izleyin ve yönetin",
   manifest: "/manifest.json",
 };
 

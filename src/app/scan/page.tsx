@@ -10,9 +10,9 @@ export default function ScanPage() {
                 <div className="w-24 h-24 bg-slate-900 rounded-full flex items-center justify-center mx-auto border-2 border-dashed border-slate-700 animate-pulse">
                     <ScanBarcode size={48} className="text-slate-500" />
                 </div>
-                <h1 className="text-2xl font-bold text-white">Scan QR Code</h1>
+                <h1 className="text-2xl font-bold text-white">QR Kod Tara</h1>
                 <p className="text-slate-400 max-w-xs mx-auto">
-                    Point your camera at a machine's QR code to view details or report a fault.
+                    Makine detaylarını görmek veya arıza bildirmek için kameranızı QR koda tutun.
                 </p>
             </div>
 

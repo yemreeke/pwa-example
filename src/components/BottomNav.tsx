@@ -9,10 +9,10 @@ const BottomNav = () => {
     const pathname = usePathname();
 
     const navItems = [
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'Inventory', href: '/inventory', icon: Grid },
-        { name: 'Scan', href: '/scan', icon: ScanLine }, // Dummy route
-        { name: 'Settings', href: '/settings', icon: Settings }, // Dummy route
+        { name: 'Anasayfa', href: '/', icon: Home },
+        { name: 'Envanter', href: '/inventory', icon: Grid },
+        { name: 'Tara', href: '/scan', icon: ScanLine }, // Dummy route
+        { name: 'Ayarlar', href: '/settings', icon: Settings }, // Dummy route
     ];
 
     return (

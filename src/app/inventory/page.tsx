@@ -26,8 +26,8 @@ export default function InventoryPage() {
                     <Grid size={24} />
                 </div>
                 <div>
-                    <h1 className="text-xl font-bold tracking-tight text-white">Inventory</h1>
-                    <p className="text-xs text-slate-400">Manage Miners by Block</p>
+                    <h1 className="text-xl font-bold tracking-tight text-white">Envanter</h1>
+                    <p className="text-xs text-slate-400">Blok Bazlı Madenci Yönetimi</p>
                 </div>
             </header>
 

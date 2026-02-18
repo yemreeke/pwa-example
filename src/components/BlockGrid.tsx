@@ -44,7 +44,7 @@ const BlockGrid = ({ machines }: BlockGridProps) => {
                                 : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
                         )}
                     >
-                        Block {block}
+                        Blok {block}
                     </button>
                 ))}
             </div>
@@ -54,7 +54,7 @@ const BlockGrid = ({ machines }: BlockGridProps) => {
                 {Object.entries(units).map(([unitId, unitMachines]) => (
                     <div key={unitId} className="bg-slate-900 border border-slate-800 rounded-xl p-3">
                         <h3 className="text-xs font-semibold text-slate-500 mb-2 uppercase tracking-wider">
-                            Unit {unitId}
+                            Ünite {unitId}
                         </h3>
                         <div className="grid grid-cols-4 gap-1.5">
                             {unitMachines.sort((a, b) => a.slot - b.slot).map(machine => (

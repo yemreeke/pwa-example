@@ -16,7 +16,7 @@ const MachineDetailModal = ({ machine, onClose }: MachineDetailModalProps) => {
         // In a real app, this would call an API
         const toast = document.createElement('div');
         toast.className = 'fixed top-4 left-1/2 -translate-x-1/2 bg-slate-800 text-white px-4 py-2 rounded-lg shadow-xl z-[60] text-sm animate-in fade-in slide-in-from-top-4 duration-300';
-        toast.innerText = `Reported fault for ${machine.serial_no}`;
+        toast.innerText = `${machine.serial_no} için arıza bildirildi`;
         document.body.appendChild(toast);
         setTimeout(() => toast.remove(), 3000);
         onClose();
@@ -55,7 +55,7 @@ const MachineDetailModal = ({ machine, onClose }: MachineDetailModalProps) => {
                 <div className="grid grid-cols-2 gap-3 mb-8">
                     <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
                         <div className="flex items-center gap-2 text-slate-400 text-xs uppercase mb-1">
-                            <Thermometer size={14} /> Temp
+                            <Thermometer size={14} /> Sıcaklık
                         </div>
                         <div className="text-lg font-semibold text-white">{machine.temperature.toFixed(1)}°C</div>
                     </div>
@@ -67,19 +67,19 @@ const MachineDetailModal = ({ machine, onClose }: MachineDetailModalProps) => {
                     </div>
                     <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
                         <div className="flex items-center gap-2 text-slate-400 text-xs uppercase mb-1">
-                            <Cpu size={14} /> Unit
+                            <Cpu size={14} /> Ünite
                         </div>
-                        <div className="text-lg font-semibold text-white">Block {machine.block} - U{machine.unit}</div>
+                        <div className="text-lg font-semibold text-white">Blok {machine.block} - U{machine.unit}</div>
                     </div>
                     <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
                         <div className="flex items-center gap-2 text-slate-400 text-xs uppercase mb-1">
-                            <Activity size={14} /> Status
+                            <Activity size={14} /> Durum
                         </div>
                         <div className={clsx(
                             "text-lg font-semibold",
                             machine.status === 'ACTIVE' ? 'text-emerald-400' :
                                 machine.status === 'FAULTY' ? 'text-rose-400' : 'text-amber-400'
-                        )}>{machine.status}</div>
+                        )}>{machine.status === 'ACTIVE' ? 'AKTİF' : machine.status === 'FAULTY' ? 'ARIZALI' : 'BAKIMDA'}</div>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@ const MachineDetailModal = ({ machine, onClose }: MachineDetailModalProps) => {
                     className="w-full py-3.5 bg-rose-600 hover:bg-rose-700 text-white font-semibold rounded-xl flex items-center justify-center gap-2 transition-colors"
                 >
                     <AlertTriangle size={18} />
-                    Report Fault
+                    Arıza Bildir
                 </button>
             </div>
         </div>
