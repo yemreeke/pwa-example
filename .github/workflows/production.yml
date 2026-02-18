@@ -13,7 +13,7 @@ jobs:
     env:
       CONTAINER_NAME: pwa-example
       IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/app:pwa-example
-      PORT: 3007
+      PORT: 3031
 
     steps:
       - name: Checkout repository
